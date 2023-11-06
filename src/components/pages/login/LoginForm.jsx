@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import styled from "styled-components";
 
 export default function LoginForm() {
   //state
@@ -19,7 +20,7 @@ export default function LoginForm() {
 
   //affichage
   return (
-    <form action="submit" onSubmit={handleSubmit}>
+    <LoginFormStyled action="submit" onSubmit={handleSubmit}>
       <h1>Bienvenue chez BARBE NOIRE !</h1>
       <h2>Connectez-vous:</h2>
       <input
@@ -30,7 +31,11 @@ export default function LoginForm() {
         required
       />
       <button>Accédez à votre espace</button>
-      <Link to="/home">Vers order page</Link>
-    </form>
+      {/* <Link to="/home">Vers order page</Link> */}
+    </LoginFormStyled>
   );
 }
+
+const LoginFormStyled = styled.form`
+  background-color: green;
+`;
