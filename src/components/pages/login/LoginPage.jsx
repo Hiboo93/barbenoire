@@ -1,13 +1,11 @@
 import styled from 'styled-components';
 import LoginForm from './LoginForm.jsx';
-import Logo from '../../reusable-ui/Logo.js';
 
 export default function LoginPage() {
 
   //affichage
   return (
     <LoginPageStyled>
-      <Logo/>
       <LoginForm/>
     </LoginPageStyled>
   );
@@ -15,12 +13,14 @@ export default function LoginPage() {
 
 const LoginPageStyled = styled.div`
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  background: url("/images/BGBW2barbenoire.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-  ::before {
+
+  /* ::before {
     content: '';
     background: url("/images/BGBW2barbenoire.png");
     background-position: center;
@@ -33,5 +33,6 @@ const LoginPageStyled = styled.div`
     right: 0;
     bottom: 0;
     z-index: -1;
-  }
+  } */
+
 `;
